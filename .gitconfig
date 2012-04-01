@@ -1,0 +1,21 @@
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+
+[core]
+	excludesfile = /Users/SKun/.gitignore
+
+[user]
+	name = Shrayas
+	email = shrayasr@gmail.com
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[merge]
+	tool = opendiff
