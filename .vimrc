@@ -18,6 +18,8 @@ map <ESC><ESC> :nohlsearch<cr>
 map <UP> <C-y>
 map <DOWN> <C-e>
 nmap <A-4> :bd<cr>
+nmap j gj
+nmap k gk
 set nu
 set nobackup
 set ai
