@@ -20,6 +20,7 @@ map <DOWN> <C-e>
 nmap <A-4> :bd<cr>
 nmap j gj
 nmap k gk
+nmap <C-e> :e#<CR>
 set nu
 set nobackup
 set ai
