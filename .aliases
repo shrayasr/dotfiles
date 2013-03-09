@@ -8,3 +8,5 @@ alias ld="ls -lG | grep ^d"
 
 alias ip="curl www.icanhazip.com"
 alias localip="ifconfig getifaddr en1"
+
+alias c="cd ~/code"
