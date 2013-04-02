@@ -10,3 +10,5 @@ alias ip="curl www.icanhazip.com"
 alias localip="ifconfig getifaddr en1"
 
 alias c="cd ~/code"
+
+alias pong="ping www.google.com"
