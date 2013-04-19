@@ -1,1 +1,14 @@
-function gi() { curl http://gitignore.io/api/$@ ;}
+function gi() 
+{
+	curl http://gitignore.io/api/$@
+}
+
+function a()
+{
+	if [ -d "env" ]
+	then
+		source env/bin/activate
+	else
+		echo "Directory doesn't contain a virtualenv"
+	fi
+}
