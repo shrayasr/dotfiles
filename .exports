@@ -1,2 +1,3 @@
 export EDITOR="vim"
 export MANPAGER="less -X"
+export PATH=$PATH:/usr/local/sbin
