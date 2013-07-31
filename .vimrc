@@ -55,7 +55,6 @@ set autoread 						" set to auto read when a file is changed from outside
 set hid 							" buffer becomes hidden when abandoned
 set magic 							" Regex magic
 set laststatus=2 					" status line magic
-set lines=40
 
 set statusline=%t\ %y\ [%c,%l]\ [%p%%\ of\ %L]\ %r%m
 
