@@ -4,3 +4,5 @@ export PATH=$PATH:/usr/local/sbin:/Users/Shrayas/anaconda/bin:/Users/Shrayas/act
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+export GNOM_CONFIG_FILEPATH="/Users/shrayas/code/hacks/project-gnom/config/gnom_local.properties"
