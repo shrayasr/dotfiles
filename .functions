@@ -1,14 +1,31 @@
 function gi() 
 {
-	curl http://gitignore.io/api/$@
+  curl http://gitignore.io/api/$@
 }
 
 function a()
 {
-	if [ -d "env" ]
-	then
-		source env/bin/activate
-	else
-		echo "Directory doesn't contain a virtualenv"
-	fi
+  if [ -d "env" ]
+    then
+      source env/bin/activate
+  else
+    echo "Directory doesn't contain a virtualenv"
+      fi
+}
+
+cdf() {
+  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
+
+function nyan() {
+  echo
+    echo -en $RED'-_-_-_-_-_-_-_'
+    echo -e $NOCOLOR$BOLD',------,'$NOCOLOR
+    echo -en $YELLOW'_-_-_-_-_-_-_-'
+    echo -e $NOCOLOR$BOLD'|   /\_/\\'$NOCOLOR
+    echo -en $GREEN'-_-_-_-_-_-_-'
+    echo -e $NOCOLOR$BOLD'~|__( ^ .^)'$NOCOLOR
+    echo -en $CYAN'-_-_-_-_-_-_-'
+    echo -e $NOCOLOR$BOLD'""  ""'$NOCOLOR
+    echo
 }
