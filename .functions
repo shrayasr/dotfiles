@@ -29,3 +29,7 @@ function nyan() {
     echo -e $NOCOLOR$BOLD'""  ""'$NOCOLOR
     echo
 }
+
+function md() {
+  mkdir $1 && cd $1
+}
