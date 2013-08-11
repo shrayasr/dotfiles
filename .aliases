@@ -3,7 +3,7 @@ alias ..="cd .."
 alias v="vim"
 alias m="mvim"
 
-alias ls="ls -lG"
+alias ls="ls -lG --color"
 alias ld="ls -lG | grep ^d"
 
 alias ip="curl www.icanhazip.com"
