@@ -26,7 +26,19 @@ else
 fi
 
 function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+
+  version_no=$(git --version | cut -d " " -f3 | cut -d "." -f2)
+  msg_to_check=""
+
+  if [ $version_no = "7" ]
+  then
+    msg_to_check="nothing to commit (working directory clean)"
+  elif [ $version_no = "8" ]
+  then
+    msg_to_check="nothing to commit, working directory clean"
+  fi
+
+	[[ $(git status 2> /dev/null | tail -n1) != $msg_to_check ]] && echo "*"
 }
 
 function parse_git_branch() {
