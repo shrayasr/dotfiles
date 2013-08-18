@@ -3,7 +3,7 @@ alias ..="cd .."
 alias v="vim"
 alias m="mvim"
 
-alias ls="ls -lG --color=auto"
+alias ls="ls -lG"
 alias ld="ls -lG | grep ^d"
 
 alias ll='ls -alF'
