@@ -5,6 +5,11 @@ function gi()
   curl http://gitignore.io/api/$@
 }
 
+function e()
+{
+  [ ! -z $1 ] && open http://projecteuler.net/problem=$1
+}
+
 function a()
 {
   if [ -d "env" ]
