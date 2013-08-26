@@ -1,7 +1,11 @@
 export EDITOR="vim"
 export MANPAGER="less -X"
-export PATH=$PATH:/usr/local/sbin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export GNOM_CONFIG_FILEPATH="/Users/shrayas/code/hacks/project-gnom/config/gnom_local.properties"
+
+# PATH Exports
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:$HOME/yagarto/bin
+export PATH=$PATH:$HOME/yagarto/tools
