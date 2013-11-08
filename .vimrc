@@ -21,6 +21,7 @@ set hlsearch			" highlight matches
 set incsearch 			" incremental serarch
 set history=500 		" long history
 set undolevels=1000     " setting undo levels
+set nu              "line nos
 
 " disable sounds
 set vb t_vb="
