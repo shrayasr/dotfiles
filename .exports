@@ -9,3 +9,4 @@ export GNOM_CONFIG_FILEPATH="/Users/shrayas/code/hacks/project-gnom/config/gnom_
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:$HOME/yagarto/bin
 export PATH=$PATH:$HOME/yagarto/tools
+export PATH=$PATH:/usr/local/nginx143/sbin
