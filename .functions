@@ -38,7 +38,7 @@ function nyan() {
 }
 
 function md() {
-  mkdir $1 && cd $1
+  mkdir -pv $1 && cd $1
 }
 
 function isprime {
@@ -59,4 +59,8 @@ function unmark {
 
 function marks {
   ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+
+function mdgit {
+  mkdir $1 && cd $1 && git init
 }
