@@ -1,112 +1,254 @@
-""""""""""""""""""""""""
-" Editing Settings
-""""""""""""""""""""""""
+" Vimrc written from scratch by reading from Learn vimscript the hard way
+" Author: Shrayas Rajagopal
+" Register used for all operations required: *c*
 
-" Enable filetype plugin
-filetype plugin on
-filetype indent on
+"""""""""" Pathogen
 
-" Filetypes and encoding
-set fileformats=unix,dos,mac
-set encoding=utf-8
+filetype off
+execute pathogen#infect()
 
-" General behaviour
-set autochdir 			" cwd is same as file
-set ai 					" autoindent
-set nowrap 				" no wrapping
-set nocompatible 		" VIM instead of vi 
-set smartcase 			" smart case while searching
-set ignorecase 			" ignore casing
-set hlsearch			" highlight matches
-set incsearch 			" incremental serarch
-set history=500 		" long history
-set undolevels=1000     " setting undo levels
-set nu              "line nos
+"""""""""" Basic rules
 
-" disable sounds
+" Assume the g by default on substitutes
+set gdefault
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Don't care about vi mode
+set nocompatible
+
+" Set CWD to the same things as the file in buffer
+set autochdir
+
+" Alerts, visual bells
 set vb t_vb="
 set noerrorbells
 
-" tabbing, 2 spaces as tab
+" Allow wrapping
+set wrap
+
+" Options for search
+set smartcase
+set ignorecase
+set hlsearch
+set incsearch
+
+" History settings
+set history=500
+set undolevels=1000
+
+" Filetypes and Encoding
+set fileformats=unix,dos,mac
+set encoding=utf-8
+
+" Enable filetype plugin
+filetype plugin indent on
+
+" Allow syntax highlighting
+syntax on
+
+" Indentation
+set si
+set ai
+
+" Set line nos. to be relative and sets the width to a more reasonable level
+set relativenumber
+set numberwidth=2
+
+" Tab settings
 set expandtab
 set smarttab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Filetype specific 
-au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+"""""""""" UI based settings
 
+" Some split magic
+" Vertical splits are opened to right and Horiz to the bottom 
+" by default
+set splitright
+set splitbelow
 
-""""""""""""""""""""""""
-" UI 
-""""""""""""""""""""""""
+" Show matching bracket
+set showmatch
 
-syntax on
+" Hide mouse while typing
+set mousehide
 
-set showmatch 						" show matching braces
-set mousehide 						" hide mouse while typing
-set linespace=0 					" no extra pixel lines
-set lazyredraw 						" dont redraw wile running macro
-set wildmenu 						" wild menu
-set wildmode=longest,list,full 		" wild menu options
-set ruler 							" show current position
-set nobackup 						" dont create backup files
-set autoread 						" set to auto read when a file is changed from outside
-set hid 							" buffer becomes hidden when abandoned
-set magic 							" Regex magic
-set laststatus=2 					" status line magic
+" No. of pixel lines b/w characters
+set linespace=0
 
-set statusline=%t\ %y\ [%c,%l]\ [%p%%\ of\ %L]\ %r%m
+" Dont redraw while executing macros
+set lazyredraw
 
-""""""""""""""""""""""""
-" Plugins
-""""""""""""""""""""""""
+" Match menu while in : mode to select something
+set wildmenu
+set wildmode=longest,list,full
 
-au BufNewFile,BufRead *.xsjs set filetype=js
+" Show current position on bottom right with 
+" a percentage reading on where in the file
+" you are
+set ruler
 
-" SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" Don't create backup files
+set nobackup
 
+" If a file has changed outside vim, reload it inside
+set autoread
 
-""""""""""""""""""""""""
-" Keymappings
-""""""""""""""""""""""""
+" Set a buffer to hidden when abandoned
+" i.e. changes are not saved and you move
+" to a different buffer
+set hid
 
-" Create vertical split
-noremap <leader>v :vsp^N<cr> 		
+" Some magic shiz relating to escaping chars
+set magic
 
-" Create horizontal split
-noremap <leader>h :split^N<cr>
+" If you have more than 2 split, show the status
+" line on the 2nd split only
+set laststatus=2
 
-" Edit vimrc
-map <leader>e :e! $MYVIMRC<cr>
+" Status line magic
 
-" Remove highlights
-map <ESC><ESC> :nohlsearch<cr>
+" Name of the file
+set statusline=%t\ 
 
-" Map up and down to move visible lines instead of logical lines
-nmap j gj
-nmap k gk
+" Type of the file
+set statusline+=%y\ 
+
+" [ Column, Line no. ]
+set statusline+=[%c,%l]\ 
+
+" [ Percentage through a file of Total lines in file
+set statusline+=[%p%%\ of\ %L]\ 
+
+" Readonly flag, modified flag
+set statusline+=%r%m
+
+" Add the fugitive part that shows the branch we're on
+set statusline+=%{fugitive#statusline()}
+
+"""""""""" Plugin settings
+
+""""" CTRLP
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_extensions = ['funky']
+let g:ctrlp_clear_cache_on_exit = 0
+
+"""""""""" Maps
+
+" EXPERIMENTAL: HUGE CHANGE. Mapping : to ;
+nnoremap ; :
+nnoremap : <nop>
+
+" EXPERIMENTAL: Sane regex
+nnoremap / /\v
+vnoremap / /\v
+
+" EXPERIMENTATL: Keep search results to the middle of the screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Sane navigation with splits
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Always reselect block after indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Ctrl P Mappings
+nnoremap <leader><leader> :CtrlPBuffer<cr>
+nnoremap <leader>o :CtrlPFunky<cr>
+
+" Nerd tree mappings
+nnoremap <F3> :NERDTreeToggle<cr>
+
+" Remove highlights after search
+nnoremap <esc><esc> :nohlsearch<cr>
+
+" Map up and down to move physical lines
+" Instead of logical lines
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Alt-tab with buffers
-nmap <C-e> :e#<CR>
+nnoremap <c-e> :e#<cr>
 
-" space and shift space map
-noremap <S-space> <C-b>
-noremap <space> <C-f>
+" Ctrl N and Ctrl P for previous and next buffers
+nnoremap <c-n> :bnext<cr>
+nnoremap <c-b> :bprev<cr>
 
-" smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" Use space like in browsers
+nnoremap <space> <c-f>
+nnoremap <s-space> <c-b>
 
-" close buffer
-map <leader>q :bd<cr>
+" Map Y to behave like C and D
+nnoremap Y y$
 
-" map 0 to first non blank character
-map 0 ^
+" Map 0 to go to first character on line
+nnoremap 0 ^
 
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+" map leader+d in NORMAL mode to move the line you're on, down.
+nnoremap <leader>d ddp
+
+" map the same leader+d in VISUAL mode to capitalize selected words
+vnoremap <leader>d U
+
+" map ctrlD in INSERT and NORMAL mode to uppercase the letter the cursor is on
+" uses register c so beware
+inoremap <leader>u <esc>mcviwU`ca
+nnoremap <leader>u mcviwU`c
+
+""""" Quickly edit Vimrc
+
+" In a split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" In the same window
+nnoremap <leader>ee :e $MYVIMRC<cr>
+
+"""""
+
+" Quickly source Vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>:echo "Sourced!"<cr>:redraw<cr>
+
+" Add quotes around selection
+" uses register c so beware
+vnoremap <leader>" <esc>mc`>a"<esc>`<i"<esc>`c
+
+"""""""""" Autocmd
+
+" When a XSJS or a XSJSLIB file is opened, treat it like a js file
+augroup filetype_xsjs_xsjslib
+	autocmd!
+	autocmd BufNewFile,BufRead *.xsjs,*.xsjslib setfiletype javascript
+augroup END
+
+" When editing a python file, set the tabs to 4 spaces
+augroup filetype_python
+	autocmd!
+	setlocal tabstop=4
+	setlocal softtabstop=4
+	setlocal shiftwidth=4
+augroup END
+
+"Only show cursorline when in current window and normal mode
+augroup cursor_line
+  autocmd!
+  autocmd WinLeave,InsertEnter * set nocursorline
+  autocmd WinEnter,InsertLeave * set cursorline
+augroup END
+
+"""""""""" Others
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
