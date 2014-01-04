@@ -9,6 +9,9 @@ execute pathogen#infect()
 
 """""""""" Basic rules
 
+" Allow mouse use
+set mouse=a
+
 " Assume the g by default on substitutes
 set gdefault
 
