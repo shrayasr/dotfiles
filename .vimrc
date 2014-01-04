@@ -153,7 +153,7 @@ nnoremap : <nop>
 nnoremap / /\v
 vnoremap / /\v
 
-" EXPERIMENTAL: Keep search results to the middle of the screen
+" Keep search results to the middle of the screen
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
