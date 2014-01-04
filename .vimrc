@@ -65,6 +65,10 @@ set shiftwidth=2
 
 """""""""" UI based settings
 
+" Use solarized even on commandline mode
+set t_Co=256
+color solarized
+
 " Some split magic
 " Vertical splits are opened to right and Horiz to the bottom 
 " by default
