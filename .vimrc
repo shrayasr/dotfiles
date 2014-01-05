@@ -243,9 +243,7 @@ augroup END
 " When editing a python file, set the tabs to 4 spaces
 augroup filetype_python
 	autocmd!
-	setlocal tabstop=4
-	setlocal softtabstop=4
-	setlocal shiftwidth=4
+	autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 "Only show cursorline when in current window and normal mode
@@ -259,3 +257,7 @@ augroup END
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+" highlight 81st column
+highlight ColorColumn ctermbg=magenta
+set colorcolumn=81
