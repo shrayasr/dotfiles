@@ -9,7 +9,7 @@ execute pathogen#infect()
 
 """""""""" Basic rules
 
-" Allow mouse use
+" Allow mouse
 set mouse=a
 
 " Assume the g by default on substitutes
@@ -70,7 +70,7 @@ set shiftwidth=2
 
 " Use solarized even on commandline mode
 set t_Co=256
-color solarized
+color badwolf
 
 " Some split magic
 " Vertical splits are opened to right and Horiz to the bottom 
@@ -156,6 +156,9 @@ nnoremap : <nop>
 nnoremap / /\v
 vnoremap / /\v
 
+" Delete the current buffer
+nnoremap <leader>q :bd<cr>
+
 " Keep search results to the middle of the screen
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -165,6 +168,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Sane split creation
+nnoremap <leader>v :vnew<cr>
 
 " Always reselect block after indentation
 vnoremap < <gv
@@ -258,6 +264,6 @@ augroup END
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
-" highlight 81st column
+" Highlight 81st column
 highlight ColorColumn ctermbg=magenta
 set colorcolumn=81

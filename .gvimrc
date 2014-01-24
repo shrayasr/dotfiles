@@ -1,8 +1,8 @@
 " Use the solarized colour scheme
-colorscheme solarized
+colorscheme badwolf
 
 " Set guifont to deja vu sans mono at 11pt
-set guifont=DejaVu\ Sans\ Mono:h11
+set guifont=Monaco:h12
 
 " Set no. of colours to 256
 set t_Co=256
