@@ -1,3 +1,6 @@
+# use VI mode by default in terminal
+set -o vi
+
 export EDITOR="vim"
 export MANPAGER="less -X"
 export LC_ALL=en_US.UTF-8
