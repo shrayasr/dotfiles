@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/badwolf"]
 	path = .vim/bundle/badwolf
 	url = git@github.com:sjl/badwolf.git
+[submodule ".vim/bundle/vim-golang"]
+	path = .vim/bundle/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git
