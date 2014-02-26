@@ -240,6 +240,12 @@ vnoremap <leader>" <esc>mc`>a"<esc>`<i"<esc>`c
 
 """""""""" Autocmd
 
+" When a "md" file is loaded, treat it like a markdown file
+augroup filetype_md
+  autocmd!
+  autocmd BufNewFile,BufRead *.md setfiletype markdown
+augroup END
+
 " When a XSJS or a XSJSLIB file is opened, treat it like a js file
 augroup filetype_xsjs_xsjslib
 	autocmd!
