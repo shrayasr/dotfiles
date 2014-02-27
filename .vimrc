@@ -68,9 +68,12 @@ set shiftwidth=2
 
 """""""""" UI based settings
 
-" Use solarized even on commandline mode
+" Use 256 colours on commandline mode
 set t_Co=256
 color badwolf
+
+" Hack for getting vim to work nicely inside tmux
+set term=screen-256color
 
 " Some split magic
 " Vertical splits are opened to right and Horiz to the bottom 
