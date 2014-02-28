@@ -64,3 +64,8 @@ function marks {
 function mdgit {
   mkdir $1 && cd $1 && git init
 }
+
+function gogo {
+  echo "Setting GOPATH to $(pwd)"
+  export GOPATH=$(pwd)
+}
