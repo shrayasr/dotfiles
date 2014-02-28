@@ -68,4 +68,6 @@ function mdgit {
 function gogo {
   echo "Setting GOPATH to $(pwd)"
   export GOPATH=$(pwd)
+  echo "putting $GOPATH/bin to PATH"
+  export PATH=$GOPATH/bin:$PATH
 }
