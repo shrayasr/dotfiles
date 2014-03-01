@@ -2,7 +2,7 @@ export MARKPATH=$HOME/.marks
 
 function gi() 
 {
-  curl http://gitignore.io/api/$@
+  curl http://www.gitignore.io/api/$@
 }
 
 function e()
