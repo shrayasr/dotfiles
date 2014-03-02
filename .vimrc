@@ -151,11 +151,12 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 """""""""" Maps
 
-" EXPERIMENTAL: HUGE CHANGE. Mapping : to ;
+" EXPERIMENTAL
+inoremap jj <esc>
+
 nnoremap ; :
 nnoremap : <nop>
 
-" EXPERIMENTAL: Sane regex
 nnoremap / /\v
 vnoremap / /\v
 
