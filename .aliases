@@ -37,3 +37,5 @@ alias oo="open ."
 alias +x="chmod +x"
 
 alias bd=". bd -s"
+
+alias st="git st"
