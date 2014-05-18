@@ -140,6 +140,9 @@ set statusline+=%r%m
 " Add the fugitive part that shows the branch we're on
 set statusline+=%{fugitive#statusline()}
 
+" dont think of _ as a keyword
+set iskeyword-=_
+
 """""""""" Plugin settings
 
 """"" CTRLP
