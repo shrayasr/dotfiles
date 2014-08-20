@@ -39,3 +39,7 @@ alias +x="chmod +x"
 alias bd=". bd -s"
 
 alias st="git st"
+
+alias pm="python manage.py"
+
+alias prr="pip install -r requirements.txt"

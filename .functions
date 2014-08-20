@@ -65,9 +65,18 @@ function mdgit {
   mkdir $1 && cd $1 && git init
 }
 
+function mdenv {
+  mkdir $1 && cd $1 && virtualenv env && source env/bin/activate
+}
+
 function gogo {
   echo "Setting GOPATH to $(pwd)"
   export GOPATH=$(pwd)
   echo "putting $GOPATH/bin to PATH"
   export PATH=$GOPATH/bin:$PATH
+}
+
+function va {
+  virtualenv env
+  source env/bin/activate
 }
