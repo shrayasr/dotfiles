@@ -151,9 +151,10 @@ let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_use_caching = 1
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+""" STUPID HOMEBREW won't install ag for me. Bored to figure out the problem.
+"let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 """""""""" Maps
 
