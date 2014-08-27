@@ -80,3 +80,8 @@ function va {
   virtualenv env
   source env/bin/activate
 }
+
+function mdnow {
+        now=$(date +"%Y%m%d_%H%M")
+        mkdir $now && cd $now
+}
