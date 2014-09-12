@@ -1,10 +1,5 @@
 export MARKPATH=$HOME/.marks
 
-function gi() 
-{
-  curl http://www.gitignore.io/api/$@
-}
-
 function e()
 {
   [ ! -z $1 ] && open http://projecteuler.net/problem=$1
@@ -80,3 +75,4 @@ function va {
   virtualenv env
   source env/bin/activate
 }
+function gi() { curl -s https://www.gitignore.io/api/$@ ;}

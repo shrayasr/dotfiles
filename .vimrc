@@ -208,12 +208,12 @@ vnoremap k gk
 nnoremap <c-e> :e#<cr>
 
 " Ctrl N and Ctrl P for previous and next buffers
-nnoremap <c-n> :bnext<cr>
-nnoremap <c-b> :bprev<cr>
+"nnoremap <c-n> :bnext<cr>
+"nnoremap <c-b> :bprev<cr>
 
 " Use space like in browsers
-nnoremap <space> <c-f>
-nnoremap <s-space> <c-b>
+"nnoremap <space> <c-f>
+"nnoremap <s-space> <c-b>
 
 " Map Y to behave like C and D
 nnoremap Y y$

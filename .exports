@@ -13,6 +13,7 @@ export TERM=xterm-256color
 export GRADLE_HOME=/Users/shrayas/gradle
 
 # PATH Exports
+export PATH=/Library/PostgreSQL/9.3/bin:$PATH
 export PATH=$PATH:/Users/shrayas/code/hacks/playa
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/mysql/bin
