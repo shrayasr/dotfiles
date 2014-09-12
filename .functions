@@ -75,4 +75,10 @@ function va {
   virtualenv env
   source env/bin/activate
 }
+
 function gi() { curl -s https://www.gitignore.io/api/$@ ;}
+
+function mdnow {
+        now=$(date +"%Y%m%d_%H%M")
+        mkdir $now && cd $now
+}
