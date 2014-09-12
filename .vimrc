@@ -145,6 +145,11 @@ set iskeyword-=_
 
 """""""""" Plugin settings
 
+""""" Easy Motion
+let g:EasyMotion_do_mapping = 0
+map <Leader>w <Plug>(easymotion-w)
+map <Leader>b <Plug>(easymotion-b)
+
 """"" CTRLP
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
