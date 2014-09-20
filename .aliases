@@ -41,5 +41,9 @@ alias bd=". bd -s"
 alias st="git st"
 
 alias pm="python manage.py"
-
 alias prr="pip install -r requirements.txt"
+alias http="python -m SimpleHTTPServer"
+
+alias t="tmux new -s "
+alias ta="tmux a -t "
+alias tl="tmux ls"
