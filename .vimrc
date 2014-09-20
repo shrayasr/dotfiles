@@ -24,12 +24,12 @@ set nocompatible
 " Set CWD to the same things as the file in buffer
 set autochdir
 
+" DONT WRAP
+set nowrap
+
 " Alerts, visual bells
 set vb t_vb="
 set noerrorbells
-
-" Allow wrapping
-set wrap
 
 " Options for search
 set smartcase
@@ -140,19 +140,17 @@ set statusline+=%r%m
 " Add the fugitive part that shows the branch we're on
 set statusline+=%{fugitive#statusline()}
 
-" dont think of _ as a keyword
-set iskeyword-=_
-
 """""""""" Plugin settings
 
 """"" Easy Motion
 let g:EasyMotion_do_mapping = 0
 map <Leader>w <Plug>(easymotion-w)
+map <Leader>s <Plug>(easymotion-s)
 map <Leader>b <Plug>(easymotion-b)
 
 """"" CTRLP
 let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|env\/'
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_clear_cache_on_exit = 0
@@ -184,6 +182,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+inoremap <c-j> <esc><c-w>j
+inoremap <c-k> <esc><c-w>k
+inoremap <c-h> <esc><c-w>h
+inoremap <c-l> <esc><c-w>l
 
 " Sane split creation
 nnoremap <leader>v :vnew<cr>
