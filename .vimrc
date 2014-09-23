@@ -144,9 +144,7 @@ set statusline+=%{fugitive#statusline()}
 
 """"" Easy Motion
 let g:EasyMotion_do_mapping = 0
-map <Leader>w <Plug>(easymotion-w)
 map <Leader>s <Plug>(easymotion-s)
-map <Leader>b <Plug>(easymotion-b)
 
 """"" CTRLP
 let g:ctrlp_map = '<leader>p'
@@ -160,6 +158,9 @@ let g:ctrlp_use_caching = 1
 "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 """""""""" Maps
+
+" Toggle wrapping
+nnoremap <leader>w :set wrap!<cr>
 
 " EXPERIMENTAL
 inoremap jj <esc>
