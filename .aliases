@@ -47,3 +47,9 @@ alias http="python -m SimpleHTTPServer"
 alias t="tmux new -s "
 alias ta="tmux a -t "
 alias tl="tmux ls"
+
+alias brci="brew cask install"
+alias brcs="brew cask search"
+alias bri="brew install"
+alias brs="brew search"
+
