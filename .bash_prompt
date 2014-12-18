@@ -27,13 +27,16 @@ fi
 
 function parse_git_dirty() {
 
-  version_no=$(git --version | cut -d " " -f3 | cut -d "." -f2)
+  version_no=$(git --version | cut -d " " -f3 | cut -d "." -f1,2)
   msg_to_check=""
 
-  if [ $version_no = "7" ]
+  if [ $version_no = "1.7" ]
   then
     msg_to_check="nothing to commit (working directory clean)"
-  elif [ $version_no = "8" ]
+  elif [ $version_no = "1.8" ]
+  then
+    msg_to_check="nothing to commit, working directory clean"
+  elif [ $version_no = "2.1" ]
   then
     msg_to_check="nothing to commit, working directory clean"
   fi
