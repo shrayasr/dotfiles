@@ -53,3 +53,4 @@ alias brcs="brew cask search"
 alias bri="brew install"
 alias brs="brew search"
 
+alias vl="vim ~/Dropbox/2015.dat"
