@@ -36,6 +36,9 @@ function parse_git_dirty() {
   elif [ $version_no = "1.8" ]
   then
     msg_to_check="nothing to commit, working directory clean"
+  elif [ $version_no = "1.9" ]
+  then
+    msg_to_check="nothing to commit, working directory clean"
   elif [ $version_no = "2.1" ]
   then
     msg_to_check="nothing to commit, working directory clean"
