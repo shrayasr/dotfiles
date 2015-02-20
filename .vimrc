@@ -22,7 +22,7 @@ set backspace=indent,eol,start
 set nocompatible
 
 " Set CWD to the same things as the file in buffer
-set autochdir
+"set autochdir
 
 " DONT WRAP
 set nowrap
@@ -70,7 +70,7 @@ set shiftwidth=2
 
 " Use 256 colours on commandline mode
 set t_Co=256
-color badwolf
+color Spacegray
 
 " Hack for getting vim to work nicely inside tmux
 set term=screen-256color
@@ -161,6 +161,9 @@ let g:ctrlp_use_caching = 1
 
 " Toggle wrapping
 nnoremap <leader>w :set wrap!<cr>
+
+" Toggle spellcheck
+nnoremap <leader>l :set spell!<cr>
 
 " EXPERIMENTAL
 inoremap jj <esc>
@@ -262,7 +265,8 @@ vnoremap <leader>" <esc>mc`>a"<esc>`<i"<esc>`c
 " When a "md" file is loaded, treat it like a markdown file
 augroup filetype_md
   autocmd!
-  autocmd BufNewFile,BufRead *.md setfiletype markdown
+  autocmd BufNewFile,BufRead *.md setfiletype markdown 
+  autocmd BufNewFile,BufRead *.md setlocal spell
 augroup END
 
 " When a XSJS or a XSJSLIB file is opened, treat it like a js file

@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = git@github.com:Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/spacegray"]
+	path = .vim/bundle/spacegray
+	url = git@github.com:ajh17/Spacegray.vim.git
