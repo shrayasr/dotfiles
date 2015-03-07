@@ -17,6 +17,7 @@ alias egrep='egrep --color=auto'
 alias ip="curl www.icanhazip.com"
 alias localip="ifconfig getifaddr en1"
 
+alias d="cd ~/dump"
 alias c="cd ~/code"
 alias lc="cd ~/lspl/code"
 
