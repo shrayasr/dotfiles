@@ -82,3 +82,7 @@ function mdnow {
         now=$(date +"%Y%m%d_%H%M")
         mkdir $now && cd $now
 }
+
+function md2pdf {
+  pandoc --from=markdown -o $2 $1
+}
