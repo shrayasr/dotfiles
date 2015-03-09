@@ -167,6 +167,8 @@ nnoremap <leader>l :set spell!<cr>
 
 " EXPERIMENTAL
 inoremap jj <esc>
+nnoremap <C-j> +
+nnoremap <C-k> -
 
 nnoremap ; :
 nnoremap : <nop>
