@@ -86,3 +86,10 @@ function mdnow {
 function md2pdf {
   pandoc --from=markdown -o $2 $1
 }
+function s {
+  grep -ie "$1" ~/db.txt
+}
+
+function sprung {
+  curl -F "sprunge=<-" http://sprunge.us
+}
