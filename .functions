@@ -1,10 +1,5 @@
 export MARKPATH=$HOME/.marks
 
-function gi() 
-{
-  curl http://www.gitignore.io/api/$@
-}
-
 function e()
 {
   [ ! -z $1 ] && open http://projecteuler.net/problem=$1
@@ -81,7 +76,20 @@ function va {
   source env/bin/activate
 }
 
+function gi() { curl -s https://www.gitignore.io/api/$@ ;}
+
 function mdnow {
         now=$(date +"%Y%m%d_%H%M")
         mkdir $now && cd $now
+}
+
+function md2pdf {
+  pandoc --from=markdown -o $2 $1
+}
+function s {
+  grep -ie "$1" ~/db.txt
+}
+
+function sprung {
+  curl -F "sprunge=<-" http://sprunge.us
 }

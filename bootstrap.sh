@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 git pull
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "add_days_to_date.py" --exclude "submodule_git2https.sh" -av . ~
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

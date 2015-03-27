@@ -17,7 +17,9 @@ alias egrep='egrep --color=auto'
 alias ip="curl www.icanhazip.com"
 alias localip="ifconfig getifaddr en1"
 
+alias d="cd ~/dump"
 alias c="cd ~/code"
+alias lc="cd ~/lspl/code"
 
 alias pong="ping -c 3 www.google.com"
 
@@ -41,5 +43,20 @@ alias bd=". bd -s"
 alias st="git st"
 
 alias pm="python manage.py"
-
 alias prr="pip install -r requirements.txt"
+alias http="python -m SimpleHTTPServer"
+
+alias t="tmux new -s "
+alias ta="tmux a -t "
+alias tl="tmux ls"
+
+alias brci="brew cask install"
+alias brcs="brew cask search"
+alias bri="brew install"
+alias brs="brew search"
+
+alias vl="vim ~/Dropbox/2015.dat"
+alias vd="vimdiff"
+
+alias mk="mkdir -p"
+

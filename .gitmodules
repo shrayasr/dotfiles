@@ -28,3 +28,18 @@
 [submodule ".vim/bundle/vim-exchange"]
 	path = .vim/bundle/vim-exchange
 	url = git@github.com:tommcdo/vim-exchange.git
+[submodule ".vim/bundle/vim-jinja"]
+	path = .vim/bundle/vim-jinja
+	url = git@github.com:mitsuhiko/vim-jinja.git
+[submodule ".vim/bundle/vim-less"]
+	path = .vim/bundle/vim-less
+	url = git@github.com:groenewege/vim-less.git
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/spacegray"]
+	path = .vim/bundle/spacegray
+	url = git@github.com:ajh17/Spacegray.vim.git
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = git@github.com:tpope/vim-fireplace.git

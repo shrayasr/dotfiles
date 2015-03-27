@@ -22,14 +22,14 @@ set backspace=indent,eol,start
 set nocompatible
 
 " Set CWD to the same things as the file in buffer
-set autochdir
+"set autochdir
+
+" DONT WRAP
+set nowrap
 
 " Alerts, visual bells
 set vb t_vb="
 set noerrorbells
-
-" Allow wrapping
-set wrap
 
 " Options for search
 set smartcase
@@ -70,7 +70,7 @@ set shiftwidth=2
 
 " Use 256 colours on commandline mode
 set t_Co=256
-color badwolf
+color Spacegray
 
 " Hack for getting vim to work nicely inside tmux
 set term=screen-256color
@@ -140,14 +140,15 @@ set statusline+=%r%m
 " Add the fugitive part that shows the branch we're on
 set statusline+=%{fugitive#statusline()}
 
-" dont think of _ as a keyword
-set iskeyword-=_
-
 """""""""" Plugin settings
+
+""""" Easy Motion
+let g:EasyMotion_do_mapping = 0
+map <Leader>s <Plug>(easymotion-s)
 
 """"" CTRLP
 let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|env\/'
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_clear_cache_on_exit = 0
@@ -158,8 +159,16 @@ let g:ctrlp_use_caching = 1
 
 """""""""" Maps
 
+" Toggle wrapping
+nnoremap <leader>w :set wrap!<cr>
+
+" Toggle spellcheck
+nnoremap <leader>l :set spell!<cr>
+
 " EXPERIMENTAL
 inoremap jj <esc>
+nnoremap <C-j> +
+nnoremap <C-k> -
 
 nnoremap ; :
 nnoremap : <nop>
@@ -179,6 +188,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+inoremap <c-j> <esc><c-w>j
+inoremap <c-k> <esc><c-w>k
+inoremap <c-h> <esc><c-w>h
+inoremap <c-l> <esc><c-w>l
 
 " Sane split creation
 nnoremap <leader>v :vnew<cr>
@@ -208,12 +221,12 @@ vnoremap k gk
 nnoremap <c-e> :e#<cr>
 
 " Ctrl N and Ctrl P for previous and next buffers
-nnoremap <c-n> :bnext<cr>
-nnoremap <c-b> :bprev<cr>
+"nnoremap <c-n> :bnext<cr>
+"nnoremap <c-b> :bprev<cr>
 
 " Use space like in browsers
-nnoremap <space> <c-f>
-nnoremap <s-space> <c-b>
+"nnoremap <space> <c-f>
+"nnoremap <s-space> <c-b>
 
 " Map Y to behave like C and D
 nnoremap Y y$
@@ -254,7 +267,8 @@ vnoremap <leader>" <esc>mc`>a"<esc>`<i"<esc>`c
 " When a "md" file is loaded, treat it like a markdown file
 augroup filetype_md
   autocmd!
-  autocmd BufNewFile,BufRead *.md setfiletype markdown
+  autocmd BufNewFile,BufRead *.md setfiletype markdown 
+  autocmd BufNewFile,BufRead *.md setlocal spell
 augroup END
 
 " When a XSJS or a XSJSLIB file is opened, treat it like a js file
