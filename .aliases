@@ -60,3 +60,4 @@ alias vd="vimdiff"
 
 alias mk="mkdir -p"
 
+alias s="cat some | vipe | sponge some && cat some | pbcopy"
