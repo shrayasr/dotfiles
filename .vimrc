@@ -70,7 +70,7 @@ set shiftwidth=2
 
 " Use 256 colours on commandline mode
 set t_Co=256
-color Spacegray
+color spacegray
 
 " Hack for getting vim to work nicely inside tmux
 set term=screen-256color
