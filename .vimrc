@@ -144,7 +144,7 @@ set statusline+=%{fugitive#statusline()}
 
 """"" Easy Motion
 let g:EasyMotion_do_mapping = 0
-map <Leader>s <Plug>(easymotion-s)
+map <space><space> <Plug>(easymotion-s)
 
 """"" CTRLP
 let g:ctrlp_map = '<leader>p'
