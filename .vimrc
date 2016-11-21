@@ -183,8 +183,6 @@ nnoremap <C-w><C-g> :only<cr>:Gst<cr>
 " Muscle memory from 20+ years of PC :D
 nnoremap <C-a> ggVG
 
-
-
 " Toggle wrapping
 nnoremap <leader>w :set wrap!<cr>
 
