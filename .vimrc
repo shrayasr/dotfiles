@@ -157,7 +157,33 @@ let g:ctrlp_use_caching = 1
 """ STUPID HOMEBREW won't install ag for me. Bored to figure out the problem.
 "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
+"""""""""" user commands
+
+" Use :TODO to quickly bring up TODO
+command TODO e ~/work/TODO/TODO.md | cd ~/work/TODO | set spell!
+
 """""""""" Maps
+
+" Presentation view
+nnoremap <leader>big :set guifont=Fira\ Mono:h16<cr>
+
+" Insert a date to the end of a line
+" I use this majorly to add end date/times to my TODOs which I maintain as
+" plain text files using VIM to edit them
+inoremap <A-d>  [<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>]
+nnoremap <A-d> 0A [<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>]<esc>
+
+" Quick map to bring up git status
+nnoremap <C-g> :Gst<cr>
+inoremap <C-g> <esc>:Gst<cr>
+
+" When checking the diff via fugitive, drop back down to a plain status window
+nnoremap <C-w><C-g> :only<cr>:Gst<cr>
+
+" Muscle memory from 20+ years of PC :D
+nnoremap <C-a> ggVG
+
+
 
 " Toggle wrapping
 nnoremap <leader>w :set wrap!<cr>
@@ -165,7 +191,6 @@ nnoremap <leader>w :set wrap!<cr>
 " Toggle spellcheck
 nnoremap <leader>l :set spell!<cr>
 
-" EXPERIMENTAL
 inoremap jj <esc>
 nnoremap <C-j> +
 nnoremap <C-k> -
