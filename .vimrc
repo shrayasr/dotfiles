@@ -99,6 +99,14 @@ set ignorecase              " Ignore case for default searches
 set hlsearch                " Highlight searches
 set incsearch               " Do incremenetal searches
 
+" Better matching and options when looking for things via :e
+set wildmode=longest,list,full
+
+" The god mapping. Makes everything easier in vim given how many times
+" we hit the : button
+nnoremap ; :
+nnoremap : <nop>
+
 " Handle vim related regex issues by forcing a 
 " common behaviour
 nnoremap / /\v
@@ -114,8 +122,11 @@ nnoremap <esc><esc> :nohlsearch<cr>
 " Split behaviours
 set splitright                 " Always do vert splits to the right
 set splitbelow                 " Always do horiz splits to the bottom
+
 nnoremap <leader>v :vnew<cr>
 nnoremap <leader>s :new<cr>
+
+" Make navigation more vim-esq
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -125,13 +136,10 @@ inoremap <c-k> <esc><c-w>k
 inoremap <c-h> <esc><c-w>h
 inoremap <c-l> <esc><c-w>l
 
-
-set wildmode=longest,list,full
-
-
-nnoremap ; :
-nnoremap : <nop>
+" Easier escape
 inoremap jj <esc>
+
+" Make vim behave more consistently
 nnoremap <leader>a ggVG
 nnoremap Y y$
 nnoremap 0 ^
@@ -143,13 +151,20 @@ vnoremap < <gv
 vnoremap > >gv
 
 
+" vimrc related 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>ee :e $MYVIMRC<cr>
+
+" Quick open for common files
 nnoremap <leader>hosts :e /etc/hosts<cr>
-nnoremap <leader>big :set guifont=JetBrains\ Mono:h20<cr>
+
+" Quick maps to wrap and spell
 nnoremap <leader>w :set wrap!<cr>
+nnoremap <leader>w :set spell!<cr>
 
 
+" Snek mappings
+" This is the easymotion alternative that I'mt rying out
 nmap <Tab> <Plug>Sneak_;
 nmap <S-Tab> <Plug>Sneak_,
 xmap <Tab> <Plug>Sneak_;
@@ -158,14 +173,16 @@ omap <Tab> <Plug>Sneak_;
 omap <S-Tab> <Plug>Sneak_,
 
 
+" FZF mappings (most have leader prefix)
+" p -> Most common, show git tracked files
+" P -> Show all files
+" b -> Buffers
+" g -> Ripgrep
+" F1 -> VIM Help (no prefix)
+
 let g:fzf_layout = { 'down': '40%' }
-" Files in current directory/project
 nnoremap <leader>P :Files<CR>
-" Git-tracked files, when inside a git repo
 nnoremap <leader>p :GFiles<CR>
-" Open buffers
 nnoremap <leader>b :Buffers<CR>
-" Search text in project using ripgrep
 nnoremap <leader>g :Rg<Space>
-" Use F1 to fuzzy-search Vim/plugin help
 nnoremap <F1> :Helptags<CR>
