@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# History / state
+.bash_history
+.bash_sessions/
+.zsh_history
+.zsh_sessions/
+.viminfo
+.lesshst
+.psql_history
+.python_history
+.node_repl_history
+
+# Caches
+.cache/
+*.swp
+*.swo
+*~
+
+# Secrets — never commit
+.ssh/id_*
+.ssh/*_rsa
+.ssh/*_ed25519
+.ssh/known_hosts
+.netrc
+*.pem
+*.key
+.env
+.env.*
+.config/gh/hosts.yml
+.config/rclone/rclone.conf
+
+# Claude local state
+.claude.json
+.claude/
