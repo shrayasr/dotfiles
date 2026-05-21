@@ -139,8 +139,12 @@ inoremap <c-l> <esc><c-w>l
 " Easier escape
 inoremap jj <esc>
 
+" Easier save and select all
+nnoremap <c-a> ggVG
+inoremap <c-s> <c-o>:write<cr>
+nnoremap <c-s> :write<cr>
+
 " Make vim behave more consistently
-nnoremap <leader>a ggVG
 nnoremap Y y$
 nnoremap 0 ^
 nnoremap j gj
