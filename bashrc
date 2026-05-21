@@ -5,6 +5,7 @@ shopt -s histappend
 # ---- exports ----
 export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/Users/shrayasr/.local/share/mise/installs/node/24.15.0/bin"
 
 export HISTSIZE=100000
 export HISTFILESIZE=100000
