@@ -21,6 +21,10 @@ alias dropdb16="dropdb -p 5416"
 
 alias m="uv run manage.py"
 
+alias t="tmux new -s "
+alias ta="tmux a -t "
+alias tl="tmux ls"
+
 # ---- tool init (order matters) ----
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init bash)"
