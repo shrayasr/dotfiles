@@ -22,3 +22,4 @@ cursor-style = block
 cursor-style-blink = false
 
 keybind = super+,=text:ghostty +edit-config\n
+keybind = ctrl+l=clear_screen
