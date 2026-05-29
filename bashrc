@@ -13,13 +13,18 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # ---- aliases ----
 alias ..="cd .."
+alias +x="chmod +x"
+alias rm="rm -i"
+alias pong="ping -c 3 www.google.com"
 
-alias createuser16="createuser -p 5416"
-alias dropuser16="dropuser -p 5416"
-alias createdb16="createdb -p 5416"
-alias dropdb16="dropdb -p 5416"
+alias createuser17="createuser -p 5417"
+alias dropuser17="dropuser -p 5417"
+alias createdb17="createdb -p 5417"
+alias dropdb17="dropdb -p 5417"
 
 alias m="uv run manage.py"
+
+alias lz="lazygit"
 
 alias t="tmux new -s "
 alias ta="tmux a -t "
