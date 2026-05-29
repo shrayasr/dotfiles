@@ -1,5 +1,4 @@
 # ---- options ----
-set -o vi
 shopt -s histappend
 
 # ---- exports ----
