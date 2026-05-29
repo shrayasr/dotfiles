@@ -1,4 +1,6 @@
 tap "darrylmorley/whatcable"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Statistics utility to count lines of code
 brew "cloc"
 # Securely send things from one computer to another
@@ -35,6 +37,8 @@ brew "ripgrep"
 brew "starship"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Shell extension to navigate your filesystem faster
@@ -45,6 +49,8 @@ cask "appcleaner"
 cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Open links in any browser
+cask "choosy"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # All-in-one toolbox for developers
@@ -59,6 +65,8 @@ cask "hammerspoon"
 cask "itsycal"
 # Keyboard customiser
 cask "karabiner-elements"
+# ZSA keyboard firmware flasher
+cask "keymapp"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
 # Clipboard manager
@@ -67,6 +75,8 @@ cask "maccy"
 cask "macvim-app"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -77,6 +87,8 @@ cask "shottr"
 cask "spotify"
 # Git client
 cask "sublime-merge"
+# Real time file synchronisation software
+cask "syncthing-app"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Configurable document editor that supports Markdown
@@ -91,4 +103,5 @@ cask "whatsapp"
 cask "wispr-flow"
 # Multiplayer code editor
 cask "zed"
+npm "@earendil-works/pi-coding-agent"
 npm "corepack"
