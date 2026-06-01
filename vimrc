@@ -164,7 +164,7 @@ nnoremap <leader>hosts :e /etc/hosts<cr>
 
 " Quick maps to wrap and spell
 nnoremap <leader>w :set wrap!<cr>
-nnoremap <leader>w :set spell!<cr>
+nnoremap <leader>l :set spell!<cr>
 
 
 " Snek mappings
