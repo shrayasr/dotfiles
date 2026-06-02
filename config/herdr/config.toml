@@ -166,7 +166,7 @@ split_horizontal = "prefix+s"
 # delivery = "off"
 
 # Play sounds when agents change state in background workspaces
-delivery = "system"
+delivery = "terminal"
 
 [ui.sound]
 # enabled = true
