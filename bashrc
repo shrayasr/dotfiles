@@ -29,6 +29,9 @@ alias t="tmux new -s "
 alias ta="tmux a -t "
 alias tl="tmux ls"
 
+alias c="claude"
+alias cc="claude --dangerously-skip-permissions"
+
 # ---- tool init (order matters) ----
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init bash)"
