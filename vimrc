@@ -161,6 +161,7 @@ nnoremap <leader>ee :e $MYVIMRC<cr>
 
 " Quick open for common files
 nnoremap <leader>hosts :e /etc/hosts<cr>
+nnoremap <leader>caddy :e /opt/homebrew/etc/Caddyfile<cr>
 
 " Quick maps to wrap and spell
 nnoremap <leader>w :set wrap!<cr>
