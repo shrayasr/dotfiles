@@ -37,3 +37,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(mise activate bash)"
+
+# ---- Handy functions ----
+
+zz() {
+  local host
+  host=$(awk '/^[Hh]ost[ \t]/ {print $2}' ~/.ssh/config | fzf --prompt='ssh ❯ ' --height=40% --reverse) \
+    && [[ -n "$host" ]] && ssh "$host"
+}
