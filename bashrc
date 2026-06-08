@@ -45,3 +45,6 @@ zz() {
   host=$(awk '/^[Hh]ost[ \t]/ {print $2}' ~/.ssh/config | fzf --prompt='ssh ❯ ' --height=40% --reverse) \
     && [[ -n "$host" ]] && ssh "$host"
 }
+
+# ---- Enders ----
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
