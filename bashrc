@@ -29,6 +29,11 @@ alias t="tmux new -s "
 alias ta="tmux a -t "
 alias tl="tmux ls"
 
+alias h="herdr"
+alias ha="herdr session attach"
+alias hl="herdr session list"
+
+
 alias c="claude"
 alias cc="claude --dangerously-skip-permissions"
 
