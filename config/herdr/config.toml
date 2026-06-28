@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 # Place this file at ~/.config/herdr/config.toml
 
@@ -158,7 +159,7 @@ split_horizontal = "prefix+s"
 # accent = "cyan"
 
 # Background notification popup delivery
-agent_panel_scope = "current"
+agent_panel_scope = "all"
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show top-right in-app toasts
