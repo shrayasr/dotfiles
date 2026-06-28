@@ -2,6 +2,10 @@ local kuttyHyper = {"cmd", "alt", "ctrl"}
 
 -- Shortcuts
 
+hs.hotkey.bind(kuttyHyper, "o", function()
+	hs.application.launchOrFocus("Obsidian")
+end)
+
 hs.hotkey.bind(kuttyHyper, "z", function()
 	hs.application.launchOrFocus("Zed")
 end)
@@ -27,7 +31,7 @@ hs.hotkey.bind(kuttyHyper, "g", function()
 end)
 
 hs.hotkey.bind(kuttyHyper, "f", function()
-	hs.application.launchOrFocus("Firefox")
+	hs.application.launchOrFocus("Brave Browser")
 end)
 
 hs.hotkey.bind(kuttyHyper, "c", function()
