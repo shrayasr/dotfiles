@@ -18,6 +18,8 @@ Plug 'junegunn/fzf'                   " FZF. Enough said
 Plug 'junegunn/fzf.vim'               " Same as above ^
 
 Plug 'morhetz/gruvbox'                " Great simple theme
+
+Plug 'junegunn/goyo.vim'              " Distraction free writing
 call plug#end()
 
 " Better leader key for all the mappings below
@@ -167,6 +169,23 @@ nnoremap <leader>caddy :e /opt/homebrew/etc/Caddyfile<cr>
 nnoremap <leader>w :set wrap!<cr>
 nnoremap <leader>l :set spell!<cr>
 
+" Goyo
+
+let g:goyo_height='95%'
+let g:goyo_width='80%'
+
+function! s:goyo_enter()
+  set linebreak
+  set spell spelllang=en_us
+endfunction
+
+function! s:goyo_leave()
+  set nolinebreak
+  set nospell
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Snek mappings
 " This is the easymotion alternative that I'mt rying out
