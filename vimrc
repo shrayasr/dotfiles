@@ -165,6 +165,9 @@ nnoremap <leader>ee :e $MYVIMRC<cr>
 nnoremap <leader>hosts :e /etc/hosts<cr>
 nnoremap <leader>caddy :e /opt/homebrew/etc/Caddyfile<cr>
 
+" Quick maps to setup tags for my ai enabled writing flow
+xmap <leader>dac <C-y>,draft{$#}+ai+corrected<CR>
+
 " Quick maps to wrap and spell
 nnoremap <leader>w :set wrap!<cr>
 nnoremap <leader>l :set spell!<cr>
