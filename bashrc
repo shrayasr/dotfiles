@@ -33,6 +33,7 @@ alias h="herdr"
 alias ha="herdr session attach"
 alias hl="herdr session list"
 
+alias nosleep="caffeinate -dims"
 
 alias c="claude"
 alias cc="claude --dangerously-skip-permissions"
