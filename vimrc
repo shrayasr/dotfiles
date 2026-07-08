@@ -189,6 +189,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Snek mappings
 " This is the easymotion alternative that I'mt rying out
+nmap <space><space> <Plug>Sneak_s
 nmap <Tab> <Plug>Sneak_;
 nmap <S-Tab> <Plug>Sneak_,
 xmap <Tab> <Plug>Sneak_;
