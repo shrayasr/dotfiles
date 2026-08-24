@@ -161,6 +161,9 @@ vnoremap > >gv
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>ee :e $MYVIMRC<cr>
 
+" Quick Goyo Mode
+nnoremap <leader>gg :Goyo<cr>
+
 " Quick open for common files
 nnoremap <leader>hosts :e /etc/hosts<cr>
 nnoremap <leader>caddy :e /opt/homebrew/etc/Caddyfile<cr>
@@ -180,11 +183,13 @@ let g:goyo_width='80%'
 function! s:goyo_enter()
   set linebreak
   set spell spelllang=en_us
+  set wrap
 endfunction
 
 function! s:goyo_leave()
   set nolinebreak
   set nospell
+  set nowrap
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
