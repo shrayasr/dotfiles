@@ -22,6 +22,7 @@ alias createdb17="createdb -p 5417"
 alias dropdb17="dropdb -p 5417"
 
 alias m="uv run manage.py"
+alias http="python -m http.server"
 
 alias lz="lazygit"
 
