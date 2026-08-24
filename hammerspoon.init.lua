@@ -3,7 +3,7 @@ local kuttyHyper = {"cmd", "alt", "ctrl"}
 -- Shortcuts
 
 hs.hotkey.bind(kuttyHyper, "o", function()
-	hs.application.launchOrFocus("Obsidian")
+	hs.application.launchOrFocus("Outline")
 end)
 
 hs.hotkey.bind(kuttyHyper, "z", function()
