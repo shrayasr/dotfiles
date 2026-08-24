@@ -159,7 +159,7 @@ split_horizontal = "prefix+s"
 # accent = "cyan"
 
 # Background notification popup delivery
-agent_panel_scope = "all"
+agent_panel_scope = "current"
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show top-right in-app toasts
