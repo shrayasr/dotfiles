@@ -16,3 +16,16 @@ colorscheme gruvbox
 
 " Cleaner gui
 set go=egm
+
+function! LargeType()
+  enew
+  setlocal buftype=nofile bufhidden=wipe noswapfile
+  set guifont=JetBrains\ Mono:h50
+  Goyo 100%x100%
+  setlocal nonumber norelativenumber
+  setlocal nocursorline colorcolumn=
+  setlocal nospell wrap linebreak
+  startinsert
+endfunction
+
+nnoremap <leader>xl :call LargeType()<CR>
