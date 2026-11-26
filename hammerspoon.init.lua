@@ -50,6 +50,10 @@ hs.hotkey.bind(kuttyHyper, "s", function()
 	hs.application.launchOrFocus("Slack")
 end)
 
+hs.hotkey.bind(kuttyHyper, "h", function()
+	hs.application.launchOrFocus("Herdr")
+end)
+
 
 -- Window
 
